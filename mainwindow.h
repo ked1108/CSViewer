@@ -26,13 +26,6 @@ private:
     void setupUI();
     void populateTable(const std::vector<std::vector<std::string>> &data);
 
-    // Drag and drop related methods
-    QMimeData *mimeData(const QList<QTableWidgetItem *> items) const;
-    void dropEvent(QDropEvent *event) override;
-    void dragEnterEvent(QDragEnterEvent *event) override;
-    void dragMoveEvent(QDragMoveEvent *event) override;
-    void dragLeaveEvent(QDragLeaveEvent *event) override;
-
     QTableWidget *tableWidget;
 };
 
