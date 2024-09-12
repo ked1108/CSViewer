@@ -27,7 +27,7 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::setupUI() {
-    setWindowTitle("CSV File Viewer");
+    setWindowTitle("CSViewer");
     resize(800, 600);
 
     // Create a central widget and a layout
