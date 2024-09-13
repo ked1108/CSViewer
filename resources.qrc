@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/icon.png</file>  <!-- Adjust the path to your icon file -->
+    </qresource>
+</RCC>
