@@ -51,6 +51,13 @@ void MainWindow::setupUI() {
     tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Interactive);
 }
 
+void MainWindow::openCSVFileArg(const QString &filePath) {
+    if (!filePath.isEmpty()) {
+        std::vector<std::vector<std::string>> data = parseCSV(filePath.toStdString());
+        populateTable(data);
+    }
+}
+
 void MainWindow::openCSVFile() {
     QString filename = QFileDialog::getOpenFileName(this, "Open CSV File", "", "CSV Files (*.csv)");
     if (!filename.isEmpty()) {

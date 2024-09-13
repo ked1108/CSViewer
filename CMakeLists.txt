@@ -13,12 +13,13 @@ find_package(Qt5 COMPONENTS
         Gui
         Widgets
         REQUIRED)
-
-add_executable(CSV_Viewer main.cpp
+qt5_add_resources(RESOURCES resources.qrc)
+add_executable(CSViewer main.cpp
         mainwindow.cpp)
-target_link_libraries(CSV_Viewer
+target_link_libraries(CSViewer
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
         parser
 )
+target_sources(CSViewer PRIVATE ${RESOURCES})

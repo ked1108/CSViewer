@@ -18,7 +18,7 @@ class MainWindow : public QMainWindow {
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+    void openCSVFileArg(const QString &filePath);
     private slots:
         void openCSVFile();
 
